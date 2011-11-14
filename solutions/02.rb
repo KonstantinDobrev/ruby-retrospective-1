@@ -3,7 +3,7 @@ class Song
 
   def initialize name, artist, genre, subgenre, tags
     @name, @artist, @genre = name, artist, genre
-	  @subgenre, @tags = subgenre, Array(tags).map(&:downcase)
+		@subgenre, @tags = subgenre, Array(tags).map(&:downcase)
 	  @tags.push genre.downcase
 	  if subgenre != nil and subgenre != ""
 	    @tags.push subgenre.downcase 
