@@ -64,7 +64,7 @@ class Collection
   def parse_line line
     line_arr = line.split(".")
     name, artist = line_arr[0].strip, line_arr[1].strip
-  	genre_arr = line_arr[2].split(",").map(&:strip)
+    genre_arr = line_arr[2].split(",").map(&:strip)
   	genre = genre_arr[0]
   	subgenre = genre_arr[1] == nil ? "" : genre_arr[1]
   	tags = line_arr[3] == nil ? [] : line_arr[3].split(",").map(&:strip)
