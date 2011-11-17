@@ -11,7 +11,7 @@ class Song
   end
   
   def fits? criteria
-    criteria.all? { |crit| fits_single(crit) }
+    criteria.all? { |crit| fits_single?(crit) }
   end
   
   def add_tags tags
