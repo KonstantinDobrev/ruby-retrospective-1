@@ -28,7 +28,7 @@ class Song
       when :artist then @artist == crit[1]
 		  when :filter then crit[1].call(self)
 		  when :tags
-  		  Array(crit[1]).all? { |tag| has_tag(tag) }
+  		  Array(crit[1]).all? { |tag| has_tag?(tag) }
 	  end
   end
   
