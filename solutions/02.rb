@@ -22,7 +22,7 @@ class Song
   
   private
   
-  def fits_single crit
+  def fits_single? crit
     case crit[0]
       when :name then @name == crit[1]
       when :artist then @artist == crit[1]
@@ -32,7 +32,7 @@ class Song
 	  end
   end
   
-  def has_tag tag
+  def has_tag? tag
     if tag.end_with? "!"
   	 return (not @tags.any? { |elem| elem == tag.chop.downcase })
   	end
